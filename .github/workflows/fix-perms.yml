@@ -2,12 +2,12 @@ on: [push]
 jobs:
    fixme:
     runs-on: ubuntu-latest
-    name: Fix goodbye.sh permissions 
+    name: Fix entrypoint.sh permissions 
     steps:
       - name: Checke repo aus
         uses: actions/checkout@v2
       - run: |
-          chmod u+x goodbye.sh 
+          chmod u+x entrypoint.sh 
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add .
